@@ -76,3 +76,39 @@ void loop() {
 
   delay(100);  // Small delay to prevent jitter
 }
+```
+### Step 3: Flash the Code
+1. Connect the **Arduino Nano** to your computer via USB.
+2. Open the **Arduino IDE**, select the correct board (**Arduino Nano**) and the corresponding COM port.
+3. Verify the code by clicking the **checkmark icon** (Verify button) in the Arduino IDE.
+4. If there are no errors, click the **arrow icon** (Upload button) to upload the code to the Arduino Nano.
+
+### Step 4: Usage
+- Once the system is powered on, the **LDRs** will start measuring the light intensity from both directions.
+- The **servo motor** will automatically adjust the solar panel's position by comparing the light intensity detected by the two LDRs. 
+- As the sun moves across the sky, the tracker will continuously adjust the panel to ensure optimal sunlight exposure for maximum energy efficiency.
+- The solar panel powers the system while simultaneously charging the **battery**, ensuring the device remains operational even when sunlight is not present.
+
+### Step 5: Powering the System
+- The solar panel charges the **battery** via the charging module, so make sure to use a solar panel that matches the power needs of your system.
+- The battery will supply power to the **Arduino Nano** and the servo motor during periods of low sunlight or at night.
+
+## Future Enhancements
+- **Dual-Axis Solar Tracker**: Upgrade the system to control two axes (vertical and horizontal) using two servo motors for more precise sun tracking.
+- **Battery Monitoring**: Implement a battery level monitoring system to track the charge level and optimize charging based on real-time solar input.
+- **Data Logging**: Add a data logging feature to store sunlight tracking information, energy efficiency, or solar panel performance over time.
+- **Weather Adaptation**: Integrate weather sensors to adjust the tracking mechanism in response to cloud cover or other conditions.
+
+## Troubleshooting
+- **Servo Motor Not Moving**: 
+  - Check the servo wiring to ensure proper connections to the Arduino Nano. 
+  - Ensure the **servo power supply** is adequate, as servos can require higher current.
+- **Inconsistent or Erratic Movements**: 
+  - Adjust the **threshold value** in the code to fine-tune the light sensitivity difference between the LDRs.
+  - Ensure the LDRs are placed at proper angles to detect light changes accurately.
+- **Power Issues**: 
+  - Verify the battery and solar panel connections. 
+  - Ensure the charging module is functioning correctly and delivering adequate power to the system.
+
+## License
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
